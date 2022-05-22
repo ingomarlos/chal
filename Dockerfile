@@ -17,10 +17,9 @@ RUN make libs && \
   make all && \
   mkdir /app && \
   cp build/*.jar /app/ && \
-  cp run/entrypoint.sh /app/ && \
-  chmod +x /app/entrypoint.sh && \
+  cp run/run-static.sh /app/ && \
+  chmod +x /app/run-static.sh && \
   cp -r front-end/public /app
 
 WORKDIR /app
 
-#ENTRYPOINT ["/app/entrypoint.sh"]
