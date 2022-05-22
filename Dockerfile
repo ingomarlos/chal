@@ -7,7 +7,7 @@ RUN apk add vim \
   make
   
 
-RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o /usr/bin/lein && \
+RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -O /usr/bin/lein && \
   chmod +x /usr/bin/lein
   
 RUN cat /usr/bin/lein
