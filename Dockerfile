@@ -6,7 +6,7 @@ RUN apk add vim \
   curl \
   make \
   bash \
-  openjdk11-jre-11.0.15_p10-r0
+  openjdk12-jdk-12.0.2_p10-r3
   
 
 RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -O /usr/bin/lein && \
