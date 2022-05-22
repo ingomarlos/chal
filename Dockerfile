@@ -8,4 +8,6 @@ RUN apk add vim \
 RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o /usr/bin/lein && \
   chmod +x /usr/bin/lein
   
-RUN ls -lR
+WORKDIR ./kaniko/buildcontext
+
+RUN ls -l
