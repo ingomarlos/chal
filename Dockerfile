@@ -16,4 +16,6 @@ RUN cat /usr/bin/lein
 WORKDIR ./kaniko/buildcontext
 RUN ls -lR && \
   make libs && \
-  make all
+  make all && \
+  mkdir /app && \
+  cp build/* /app/
