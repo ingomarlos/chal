@@ -17,8 +17,8 @@ RUN make libs && \
   make all && \
   mkdir /app && \
   cp build/*.jar /app/ && \
-  cp run/run-static.sh /app/ && \
-  chmod +x /app/run-static.sh && \
+  cp run/* /app/ && \
+  chmod +x /app/*.sh && \
   cp -r front-end/public /app
 
 WORKDIR /app
