@@ -15,7 +15,10 @@ WORKDIR ./kaniko/buildcontext
 RUN make libs && \
   make all && \
   mkdir /app && \
-  cp build/* /app/
+  cp build/* /app/ && \
+  cp run/entrypoint.sh /app/ && \
+  chmod +x /app/entrypoint.sh
 
 WORKDIR /app
 
+ENTRYPOINT ["/app/entrypoint.sh"]
