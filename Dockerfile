@@ -6,16 +6,15 @@ RUN apt install -y vim \
   curl \
   make \
   openjdk-11-jdk
-  
-
 
 RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -O /usr/bin/lein && \
   chmod +x /usr/bin/lein
   
 RUN cat /usr/bin/lein
 WORKDIR ./kaniko/buildcontext
-RUN ls -lR && \
-  make libs && \
-  make all && \
+RUN make all && \
   mkdir /app && \
   cp build/* /app/
+
+WORKDIR /app
+
