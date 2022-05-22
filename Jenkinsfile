@@ -43,7 +43,7 @@ podTemplate(yaml: '''
         
         container('kaniko') {
           stage('build defined version') {
-            sh "/kaniko/executor --dockerfile Dockerfile --context . --destination=deninguem/build-apps:1.0.0"
+            sh "/kaniko/executor --dockerfile Dockerfile --context ./kaniko/ --destination=deninguem/build-apps:1.0.0"
           }
         }
   }
