@@ -1,7 +1,7 @@
-FROM alpine:3.4
+FROM ubuntu:20.04
 
-RUN apk update
-RUN apk add vim \
+RUN apt update
+RUN apt install -y vim \
   wget \
   curl \
   make
