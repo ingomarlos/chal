@@ -12,7 +12,7 @@ RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
   
 WORKDIR ./kaniko/buildcontext
 
-RUN ls -l && \
+RUN ls -lR && \
   make libs && \
   make all
   
