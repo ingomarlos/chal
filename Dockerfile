@@ -12,7 +12,8 @@ RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
   
 RUN cat /usr/bin/lein
 WORKDIR ./kaniko/buildcontext
-RUN make all && \
+RUN make libs && \
+  make all && \
   mkdir /app && \
   cp build/* /app/
 
