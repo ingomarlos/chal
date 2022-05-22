@@ -21,4 +21,4 @@ RUN make libs && \
 
 WORKDIR /app
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+#ENTRYPOINT ["/app/entrypoint.sh"]
