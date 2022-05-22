@@ -5,7 +5,8 @@ RUN apt install -y vim \
   wget \
   curl \
   make \
-  openjdk-11-jdk
+  openjdk-11-jdk \
+  python3
 
 RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -O /usr/bin/lein && \
   chmod +x /usr/bin/lein
@@ -17,7 +18,8 @@ RUN make libs && \
   mkdir /app && \
   cp build/*.jar /app/ && \
   cp run/entrypoint.sh /app/ && \
-  chmod +x /app/entrypoint.sh
+  chmod +x /app/entrypoint.sh && \
+  cp -r front-end/public /app
 
 WORKDIR /app
 
